@@ -162,7 +162,7 @@ defmodule Ueberauth.Strategy.Slack do
         auth: conn.private.slack_auth,
         token: conn.private.slack_token,
         user: conn.private.slack_user,
-        team: conn.private.slack_team
+        team: Dict.get(conn.private, :slack_team)
       }
     }
   end
